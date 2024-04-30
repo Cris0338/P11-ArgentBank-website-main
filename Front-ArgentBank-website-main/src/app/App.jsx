@@ -4,6 +4,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import Button from './modules/Button/Button'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,9 +21,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div>
+      <p>count is {count}</p> {/* Mostra il conteggio qui, fuori dal Button */}
+      <Button text={`Incrementa`} onClick={() => setCount(count + 1)} />
+    </div>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

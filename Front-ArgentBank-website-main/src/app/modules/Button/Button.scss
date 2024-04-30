@@ -1,0 +1,33 @@
+.button {
+    display: inline-block; // Cambiato da block a inline-block per permettere le trasformazioni
+    width: calc(100% - 16px); // Adatta la larghezza per tenere conto del padding
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #00bc77;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s; // Aggiunge una transizione fluida per transform e box-shadow
+    user-select: none; // Impedisce la selezione del testo al doppio click
+    -webkit-tap-highlight-color: transparent; // Rimuove l'effetto di evidenziazione mobile al tap
+  
+    &:hover {
+      transform: scale(1.02); // Aumenta la dimensione del bottone del 2%
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); // Aggiunge un'ombra più grande
+    }
+    
+    &:active {
+      transform: scale(0.98); // Riduce la dimensione del bottone del 2% quando è premuto
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); // Riduce l'ombra per dare effetto di pressione
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
